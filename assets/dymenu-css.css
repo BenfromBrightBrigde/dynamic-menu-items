@@ -1,0 +1,758 @@
+//*===================================
+ *              Global
+ * ================================*/
+
+.bpTest{
+	min-width: 150px;
+	min-height: 150px;
+	background: red;
+}
+html, body{
+	scroll-behavior: smooth;
+}
+
+::root{
+	/************ Colors ****************/
+	--bbwd-prime-color: #D85535;
+	--bbwd-accent-color: #D85535;
+	--bbwd-alt-color-1: ;
+	--bbwd-alt-color-2: ;
+	--bbwd-alt-color-3: ;
+	
+}
+
+
+
+
+
+
+
+
+/***************** Animations *****************/
+
+@keyframes bbwdLoading {
+  0% { background: linear-gradient(45deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), transparent, transparent); }
+  20% { background: linear-gradient(45deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .4), rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), transparent, transparent); }
+  40% { background: linear-gradient(45deg, transparent, rgba(0, 0, 0, .1), rgba(0, 0, 0, .4), rgba(0, 0, 0, .1), transparent, transparent); }
+  60% { background: linear-gradient(45deg, transparent, transparent, rgba(0, 0, 0, .1), rgba(0, 0, 0, .4), rgba(0, 0, 0, .1), transparent); }
+  80% { background: linear-gradient(45deg, transparent, transparent, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), rgba(0, 0, 0, .4), rgba(0, 0, 0, .1)); }
+  100% { background: linear-gradient(45deg,transparent, transparent, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)); }
+}
+
+
+.bbwdLoadIn{
+	animation: bbwdLoading 1.5s infinite;
+	color: transparent !important;
+}
+
+
+
+/****** flex styles ******/
+.bbwdFlex{
+	display: flex;
+}
+.bbwdCol{
+	flex-flow: column;
+}
+.bbwdRow{
+	flex-flow: row wrap;
+}
+.bbwdRowNW{
+	flex-flow: row nowrap;
+}
+.bbwdGrid{
+	display: grid;
+}
+.bbwdColTemp1{
+	grid-template-columns: 1fr;
+}
+.bbwdColTemp2{
+	grid-template-columns: 1fr 1fr;
+}
+.bbwdColTemp3{
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.bbwdColTemp4{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.bbwdRowTemp1{
+	grid-template-rows: 1fr;
+}
+.bbwdRowTemp2{
+	grid-template-rows: 1fr 1fr;
+}
+.bbwdRowTemp3{
+	grid-template-rows: 1fr 1fr 1fr;
+}
+.bbwdRowTemp4{
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.bbwdColCover2{
+	grid-column: 1 / 3;
+}
+.bbwdColCover3{
+	grid-column: 1 / 4;
+}
+.bbwdColCover4{
+	grid-column: 1 / 5;
+}
+.bbwdStartCol2{
+	grid-column-start: 2;
+}
+.bbwdStartCol3{
+	grid-column-start: 3;
+}
+.bbwdStartCol4{
+	grid-column-start: 4;
+}
+.bbwdStartCol5{
+	grid-column-start: 5;
+}
+.bbwdCenterFull{
+	justify-content: center;
+	align-items: center;
+}
+.bbwdJcntAstart{
+	justify-content: center;
+	align-items: start;
+}
+.bbwdAcntJstart{
+	justify-content: start;
+	align-items: center;
+}
+.bbwdCenterBttm{
+	justify-content: center;
+	align-items: end;
+}
+.bbwdCenterTp{
+	justify-content: center;
+	align-items: start;
+}
+.bbwdCenterStch{
+	justify-content: center;
+	align-items: stretch;
+}
+.bbwdSpcBtnStch{
+	justify-content: space-between;
+	align-items: stretch;
+}
+.bbwdSpcBtnCtr{
+	justify-content: space-between;
+	align-items: center;
+}
+.bbwdSpcArdStch{
+	justify-content: space-around;
+	align-items: stretch;
+}
+.bbwdAStch{
+	align-items: stretch;
+}
+.bbwdJEnd{
+	justify-content: end;
+}
+.bbwdJStart{
+	justify-content: start;
+}
+.bbwdJCenter{
+	justify-content: center;
+}
+.bbwdJSpaceB{
+	justify-content: space-between;
+}
+.bbwdAStart{
+	align-items: start;
+}
+.bbwdACenter{
+	align-items: center;
+}
+.bbwdAEnd{
+	align-items: end;
+}
+.bbwdAllSelfEnd{
+	justify-self: end;
+	align-self: end;
+}
+.bbwdRowRev{
+	flex-direction: row-reverse;
+}
+.bbwdGrow1{
+	flex-grow: 1;
+}
+.bbwdGrow2{
+	flex-grow: 2;
+}
+.bbwdGrow3{
+	flex-grow: 3;
+}
+.bbwdGap5{
+	gap: 5px;
+}
+.bbwdGap10{
+	gap: 10px;
+}
+.bbwdGap20{
+	gap: 20px;
+}
+.bbwdGap50{
+	gap: 50px;
+}
+.bbwdGap100{
+	gap: 100px;
+}
+.bbwdGap5_10{
+	gap: 5px 10px;
+}
+.bbwdGap10_10{
+	gap: 10px 10px;
+}
+.bbwdGap20_10{
+	gap: 20px 10px;
+}
+.bbwdGap50_10{
+	gap: 50px 10px;
+}
+.bbwdGap100_10{
+	gap: 100px 10px;
+}
+.bbwdGap5_5{
+	gap: 5px 5px;
+}
+.bbwdGap5_10{
+	gap: 5px 10px;
+}
+.bbwdGap5_20{
+	gap: 5px 20px;
+}
+.bbwdGap5_50{
+	gap: 5px 50px;
+}
+.bbwdGap5_100{
+	gap: 5px 100px;
+}
+.bbwdGap0_5{
+	gap: 0px 5px;
+}
+.bbwdGap0_10{
+	gap: 0px 10px;
+}
+.bbwdGap0_20{
+	gap: 0px 20px;
+}
+.bbwdGap0_50{
+	gap: 0px 50px;
+}
+.bbwdGap0_100{
+	gap: 0px 100px;
+}
+.bbwdGap10_5{
+	gap: 10px 5px;
+}
+.bbwdGap10_10{
+	gap: 10px 10px;
+}
+.bbwdGap10_20{
+	gap: 10px 20px;
+}
+.bbwdGap10_50{
+	gap: 10px 50px;
+}
+.bbwdGap10_100{
+	gap: 10px 100px;
+}
+
+.bbwdASelfStart{
+	align-self: start;
+}
+.bbwdASelfCent{
+	align-self: center;
+}
+.bbwdSelfEnd{
+	align-self: end;
+}
+
+.bbwdFlexGrow1{
+	flex-grow: 1;
+}
+
+
+
+
+/***************** Alert Classes *****************/
+.bbwdNotice{
+	padding: 10px;
+    border-radius: 10px;
+	border: 3px solid;
+	position: relative;
+}
+.bbwdNotice button.FRTWOOMGMTToggleEx{
+	position: absolute !important;
+	right: 10px !important;
+}
+.bbwdNotice.success{
+	background: #f3fff3;
+	border-color: #0fb40f;
+}
+.bbwdNotice.error{
+	background: #fff3f3;
+	border-color: #b40f0f;
+}
+
+
+
+/***************** Padding Classes *****************/
+.bbwdPad10px{
+	padding: 10px !important;
+}
+.bbwdPad20px{
+	padding: 20px !important;
+}
+.bbwdPad40px{
+	padding: 40px !important;
+}
+.bbwdPad50px{
+	padding: 40px !important;
+}
+/** Padding Top/Bottom Classes **/
+.bbwdTBPad10px{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.bbwdTBPad20px{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.bbwdTBPad40px{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.bbwdTBPad50px{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+/** Padding Right/Left Classes **/
+.bbwdLRPad10px{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.bbwdLRPad20px{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.bbwdLRPad40px{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.bbwdLRPad50px{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+/**** end flex styles ****/
+ 
+/***************** Transform Classes *****************/
+.bbwd180{
+	transform: rotate(180deg);
+}
+
+/***************** Text Align Classes *****************/
+.bbwdTxtCntr{
+	text-align: center;
+}
+.bbwdTxtR{
+	text-align: right;
+}
+.bbwdTxtL{
+	text-align: left;
+}
+
+/***************** Margin Classes *****************/
+.bbwdAutoMarg{
+	margin: auto;
+}
+.bbwdAutoLRMarg{
+	margin-left: auto;
+	margin-right: auto;
+}
+/** Margin Top Classes **/
+.bbwdMTop120{
+	margin-top: 120px;
+}
+.bbwdMTop60{
+	margin-top: 60px;
+}
+.bbwdMTop20{
+	margin-top: 20px;
+}
+/** Margin Bottom Classes **/
+.bbwdMBot120{
+	margin-bottom: 120px;
+}
+.bbwdMBot60{
+	margin-bottom: 60px;
+}
+.bbwdMBot20{
+	margin-bottom: 20px;
+}
+.bbwdMBot10{
+	margin-bottom: 10px;
+}
+.bbwdMBot0{
+	margin-bottom: 0px;
+}
+/** No Pad/Marg Classes **/
+.bbwdPnoPad p{
+	padding: 0;
+	margin: 0;
+}
+
+/***************** Height Classes *****************/
+/** Min Height Classes **/
+.bbwdMinH0{
+	min-height: 0px;
+}
+.bbwdMinH100{
+	min-height: 100px;
+}
+.bbwdMinH200{
+	min-height: 200px;
+}
+.bbwdMinH250{
+	min-height: 250px;
+}
+/** Max Height Classes **/
+.bbwdMaxH0{
+	max-height: 0px;
+}
+.bbwdMaxH100{
+	max-height: 100px;
+}
+.bbwdMaxH200{
+	max-height: 200px;
+}
+.bbwdMaxH250{
+	max-height: 250px;
+}
+.bbwdMaxH500{
+	max-height: 500px;
+}
+.bbwdHeight100{
+	height: 100%;
+}
+
+/***************** Width Classes *****************/
+.bbwdWidth10{
+	width: 10%;
+}
+.bbwdWidth25{
+	width: 25%;
+}
+.bbwdWidth30{
+	width: 30%;
+}
+.bbwdWidth33{
+	width: 33%;
+}
+.bbwdWidth45{
+	width: 45%;
+}
+.bbwdWidth50{
+	width: 50%;
+}
+.bbwdWidth75{
+	width: 75%;
+}
+.bbwdWidth100{
+	width: 100%;
+}
+
+.bbwdMaxWidth48{
+	max-width: 48%;
+}
+
+
+
+
+/***************** Image Object Classes *****************/
+.bbwdObjCov{
+	object-fit: cover;
+}
+.bbwdObjCon{
+	object-fit: contain;
+}
+
+
+/***************** OverFlow Classes *****************/
+.bbwdHideOver{
+	overflow: hidden;
+}
+.bbwdOverYScroll{
+	overflow-y: scroll;
+}
+
+/***************** Positions Classes *****************/
+.bbwdPosRel{
+	position: relative;
+}
+.bbwdPosAbs{
+	position: absolute;
+}
+
+/** Right Classes **/
+.bbwdRight0{
+	right: 0px;
+}
+.bbwdRight5{
+	right: 5px;
+}
+.bbwdRight10{
+	right: 10px;
+}
+.bbwdRight20{
+	right: 20px;
+}
+.bbwdRight25{
+	right: 25px;
+}
+.bbwdRight45{
+	right: 45px;
+}
+.bbwdRight50{
+	right: 50px;
+}
+.bbwdRight75{
+	right: 75px;
+}
+.bbwdRight90{
+	right: 90px;
+}
+.bbwdRight100{
+	right: 100px;
+}
+.bbwdRight125{
+	right: 125px;
+}
+/** Left Classes **/
+.bbwdLeft0{
+	left: 0px;
+}
+.bbwdLeft5{
+	left: 5px;
+}
+.bbwdLeft10{
+	left: 10px;
+}
+.bbwdLeft20{
+	left: 20px;
+}
+.bbwdLeft25{
+	left: 25px;
+}
+.bbwdLeft45{
+	left: 45px;
+}
+.bbwdLeft50{
+	left: 50px;
+}
+.bbwdLeft75{
+	left: 75px;
+}
+.bbwdLeft90{
+	left: 90px;
+}
+.bbwdLeft100{
+	left: 100px;
+}
+.bbwdLeft125{
+	left: 125px;
+}
+/** Top Classes **/
+.bbwdTop0{
+	top: 0px;
+}
+.bbwdTop5{
+	top: 5px;
+}
+.bbwdTop10{
+	top: 10px;
+}
+.bbwdTop20{
+	top: 20px;
+}
+.bbwdTop25{
+	top: 25px;
+}
+.bbwdTop45{
+	top: 45px;
+}
+.bbwdTop50{
+	top: 50px;
+}
+.bbwdTop75{
+	top: 75px;
+}
+.bbwdTop90{
+	top: 90px;
+}
+.bbwdTop100{
+	top: 100px;
+}
+.bbwdTop125{
+	top: 125px;
+}
+
+/***************** Z-Index Classes *****************/
+.bbwdZind1{
+	z-index: 1;
+}
+.bbwdZind2{
+	z-index: 2;
+}
+.bbwdZind3{
+	z-index: 3;
+}
+.bbwdZind4{
+	z-index: 4;
+}
+.bbwdZind5{
+	z-index: 5;
+}
+.bbwdZind10{
+	z-index: 10;
+}
+.bbwdZind20{
+	z-index: 20;
+}
+.bbwdZind50{
+	z-index: 50;
+}
+
+/***************** Border Classes *****************/
+/***** Style ******/
+.bbwdThinBord{
+	border: solid 2px var(--bbwd-accent-color);
+}
+.bbwdThickBord{
+	border: 3px solid var(--bbwd-accent-color);
+}
+/****** Radius *******/
+.bbwdBorRad5{
+	border-radius: 5px;
+}
+.bbwdBorRad10{
+	border-radius: 10px;
+}
+.bbwdBorRad15{
+	border-radius: 15px;
+}
+.bbwdBorRad20{
+	border-radius: 20px;
+}
+.bbwdBorRad25{
+	border-radius: 25px;
+}
+.bbwdBorRad30{
+	border-radius: 30px;
+}
+.bbwdBorRad40{
+	border-radius: 40px;
+}
+.bbwdBorRad50{
+	border-radius: 50px;
+}
+.bbwdBorRad60{
+	border-radius: 60px;
+}
+.bbwdBorRad70{
+	border-radius: 70px;
+}
+.bbwdBorRad80{
+	border-radius: 80px;
+}
+.bbwdBorRad90{
+	border-radius: 90px;
+}
+.bbwdBorRad100{
+	border-radius: 100px;
+}
+
+/** end custom classes  **/
+
+
+/****** Notice Systems **********/
+.bbwdCopy:hover{
+	cursor: pointer;
+}
+.bbwdNoticeMessage{
+	padding: 5px 15px;
+	position: absolute;
+	font-size: 18px;
+	box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .5);
+	border-radius: 3px;
+}
+.bbwdSuccessNotice{
+	background-color: #14821a;
+	color: white;
+}
+
+
+/********************** Tablet Styles **************************/
+@media only screen and (max-width: 1023px){
+	
+}
+
+
+/********************** Mobile Styles **************************/
+@media only screen and (max-width: 767px){
+	.bbwdColTemp1, .bbwdColTemp2, .bbwdColTemp3{
+		grid-template-columns: 1fr;
+	}
+	.bbwdColTemp4{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+
+
+
+
+/**** Style Overides ****/
+.bbwdHideMe{
+	display: none;
+}
+.bbwdNoSpace{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.bbwdNoMag{
+	margin: 0 !important;
+}
+.bbwdNoBorder{
+	border: none !important;
+}
+.bbwdHovPointer:hover{
+	cursor: pointer !important;
+}
+.bbwdBtnToLnk{
+	padding: 0 !important;
+    color: grey !important;
+    background: transparent !important;
+    border: none !important;
+}
+.bbwdTransparent{
+	background: transparent !important;
+}
+
+.bbwdAplWhiteBackground{
+	background: white;
+}
+.bbwdAplMargTop50{
+	margin-top: 50px;
+}
+.bbwdAplBorderR10{
+	border-radius: 10px;
+}
+.bbwdAplPad10p30{
+	padding: 10px 30px;
+}
+.bbwdDMcapit{
+	text-transform: capitalize;
+}
