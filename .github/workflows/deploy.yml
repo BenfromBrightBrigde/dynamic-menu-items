@@ -20,12 +20,12 @@ jobs:
       - name: Extract version from plugin file
         id: version
         run: |
-          VERSION=$(grep -m 1 "Version:" posts-by-taxonomy.php | awk '{print $2}')
+          VERSION=$(grep -m 1 "Version:" dynamic-menu-items.php | awk '{print $2}')
           echo "PLUGIN_VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: Checkout WordPress.org SVN
         run: |
-          svn checkout --depth=immediates "https://plugins.svn.wordpress.org/posts-by-taxonomy/" svn_repo
+          svn checkout --depth=immediates "https://plugins.svn.wordpress.org/dynamic-menu-items/" svn_repo
           cd svn_repo
           svn update trunk --set-depth=infinity
           svn update --set-depth=infinity tags
